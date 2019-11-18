@@ -1,0 +1,84 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Signin Template · Bootstrap</title>
+
+
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center" style="">
+  <img class="mb-4" src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Changer la couleur</h1>
+  <label for="red" class="sr-only">Red</label>
+  <input type="text" id="red" class="form-control" placeholder="Red" required="" autofocus="">
+  
+  <label for="green" class="sr-only">Green</label>
+  <input type="text" id="green" class="form-control" placeholder="Green" required="">
+  
+  <label for="blue" class="sr-only">Blue</label>
+  <input type="text" id="blue" class="form-control" placeholder="Blue" required="">
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Changer la couleur de la LED</button>
+  <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+
+
+
+  <script>
+    // TODO: Replace the following with your app's Firebase project configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDa7HpNk4CXm_YTp4tLfPXERE_wze2E4ds",
+        authDomain: "webtech-d872c.firebaseapp.com",
+        databaseURL: "https://webtech-d872c.firebaseio.com",
+        projectId: "webtech-d872c",
+        storageBucket: "webtech-d872c.appspot.com",
+        messagingSenderId: "341701765428",
+        appId: "1:341701765428:web:af0d315a9845de29899d61"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+console.log(firebase.app().name);  // "[DEFAULT]"
+
+    var database = firebase.database();
+var defaultStorage = firebase.storage();
+    starCountRef.on('value', function(snapshot) {
+    console.log(snapshot.val());
+    });
+  </script>
+</body></html>
